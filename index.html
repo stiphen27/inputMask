@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <!-- te movi el script arriba porque si le pones type module va a esperar que todo el DOM este cargado para ejecutarse, asi no tienes que estar preocupado por ponerlo despues del body -->
+    <script src="main.js" type="module"></script>
     <title>Máscara</title>
 </head>
 <body>
     <div id="app">
         <div class="card">
-            <div class="holder">Marcos Rivas Rojas</div>
-            <input type="text" id="inputCard" />
-            <input type="text" id="inputDate" />
-            <input type="text" id="inputCVV" />
+            <!-- esto tiene que ser un elemento de texto equis pero no un div porque semanticamente no tiene sentido -->
+            <h1 class="holder">Marcos Rivas Rojas</h1>
+            <!-- los input tienen un atributo placeholder que sirve para mostrar un texto en el input para darle info al usuario pero que cuando clickeas en el input desaparece -->
+            <input type="text" id="inputCard" placeholder="####-####-####-####"/>
+            
+            <div>
+                <input type="text" id="inputDate" placeholder="##/##" />
+                <input type="text" id="inputCVV" placeholder="XXX" />
+            </div>
         </div>
     </div>
-<script src="main.js"></script>
 </body>
 </html>
