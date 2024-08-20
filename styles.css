@@ -50,9 +50,12 @@ body{
     margin: 15px 0;
     outline: none;
 }
+
+/* 
+darle valores exactos a los inputs hacen que pierdan el responsive porque no van a crecer ni ponerse mas peque;o lo cual hara que en dispositivos tanto grande como peque'os se rompa y se vea feo  para el usuario
 .card #inputDate{
     width: 80px;
 }
 .card #inputCVV{
     width: 50px;
-}
+} */
