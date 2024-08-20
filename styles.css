@@ -20,10 +20,11 @@ body{
 }
 
 .card{
+    display: flex;
+    flex-direction: column;
     width: 500px;
     height: 300px;
     border-radius: 10px;
-    box-sizing: border-box;
     background: rgb(0, 114, 255);
     background: radial-gradient(
         circle,
@@ -40,7 +41,8 @@ body{
     padding-top: 50px;
     font-weight: bold;
 }
-.card input{
+
+input{
     border-radius: 5px;
     font-size: 28px;
     padding: 10px;
@@ -49,6 +51,17 @@ body{
     background-color: transparent;
     margin: 15px 0;
     outline: none;
+
+    &::placeholder{
+        color: white;
+    }
+}
+
+
+.card-section-below{
+    display: flex;
+    gap: 10px;
+    width: 100%;
 }
 
 /* 
@@ -59,3 +72,8 @@ darle valores exactos a los inputs hacen que pierdan el responsive porque no van
 .card #inputCVV{
     width: 50px;
 } */
+#inputDate, #inputCVV{
+    max-width: 20%;
+}
+
+
